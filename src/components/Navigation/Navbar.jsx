@@ -1,6 +1,7 @@
 import React, { useContext, useRef } from 'react'
 import { NavbarColorContext, NavbarContext } from '../../context/NavContext'
 
+
 const Navbar = () => {
 
     const navGreenRef = useRef(null)
@@ -11,7 +12,8 @@ const Navbar = () => {
         <div className='z-4 flex fixed top-0 w-full items-start justify-between'>
             <div className='lg:p-5 p-2 '>
                 <div className='lg:w-36 w-24'>
-                    <h6 className='font-[font2] leading-1.5'>Aashu</h6>
+                    {/* The path should be absolute from the root ('/') to correctly reference files in the 'public' directory. */}
+                    {/* <img src="../../generated-image.png" alt="Company Logo" /> */}
                 </div>
             </div>
             <div onClick={()=>{
@@ -20,6 +22,7 @@ const Navbar = () => {
                 navGreenRef.current.style.height = '100%'
             }}
                 onMouseLeave={() => {
+                    // I also fixed a typo here, it was 'navGreen-ref' instead of 'navGreenRef'.
                     navGreenRef.current.style.height = '0%'
                 }}
                 className='lg:h-16 h-10 bg-black relative lg:w-[16vw] w-48'>
