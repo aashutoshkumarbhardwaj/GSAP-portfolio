@@ -214,7 +214,7 @@ const FullScreenNav = () => {
             </div>
 
             {/* Background overlay for additional depth */}
-            <div className='fixed inset-0 bg-black/20 backdrop-blur-sm pointer-events-none'></div>
+            <div className='fixed inset-0 bg-black/20 pointer-events-none'></div>
             
             {/* Decorative elements */}
             <div className='fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-[#D3FD50] via-transparent to-[#D3FD50] opacity-50'></div>
